@@ -1,0 +1,15 @@
+fun factorizeToString(n: Int): String {
+    val pr = mutableListOf<Int>()
+    var number = n
+    while (number > 1) {
+        var d = 1
+        do d++ while (number % d != 0) 
+        number /= d
+        pr.add(d)
+    }
+    pr.sorted()
+    return pr.joinToString(separator = "*")
+}
+fun main() {
+    println(factorizeToString(75))
+}
