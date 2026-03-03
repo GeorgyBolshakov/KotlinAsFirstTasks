@@ -1,0 +1,15 @@
+fun sqr(a: Double): Double = a * a
+fun abs(v: List<Double>): Double {
+    var c = 0.0
+    if (v.isEmpty()) return 0.0
+    else {
+        for (element in v) c += sqr(element)
+    }
+    return kotlin.math.sqrt(c)
+}
+fun main() {
+    println(abs(listOf()))
+    println(abs(listOf(3.0)))
+    println(abs(listOf(3.0, -4.0)))
+    println(abs(listOf(4.0, -5.0, 6.0)))
+}
