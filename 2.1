@@ -1,0 +1,14 @@
+fun ageDescription(age: Int): String {
+    val a = when {
+        age % 100 in 10..19 -> "лет"
+        age % 100 !in 10..19 && age % 10 == 1 -> "год"
+        age % 100 !in 10..19 && age % 10 in 2..4 -> "года"
+        else -> "лет"
+    }
+    return ("$age $a")
+}
+fun main() {
+    println(ageDescription(21))
+    println(ageDescription(32))
+    println(ageDescription(12))
+}
