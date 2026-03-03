@@ -1,0 +1,14 @@
+fun isNumberHappy(number: Int): Boolean {
+    val a1 = number / 1000
+    val b1 = number - a1 * 1000
+    val a2 = b1 / 100
+    val b2 = b1 - a2 * 100
+    val a3 = b2 / 10
+    val a4 = b2 - a3 * 10
+    return (a1 + a2) == (a3 + a4)
+}
+fun main() {
+    println(isNumberHappy(1533))
+    println(isNumberHappy(9009))
+    println(isNumberHappy(3644))
+}
